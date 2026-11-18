@@ -66,7 +66,17 @@ color:#171717;
 font-weight:bold;
 }
 </style>
-</head>
+</head> 
+  <script>
+function ambarKonus(mesaj) {
+  speechSynthesis.speak(new SpeechSynthesisUtterance(mesaj));
+}
+    const ses = new SpeechSynthesisUtterance(mesaj);
+  ses.lang = "tr-TR";
+  ses.rate = 0.95;
+  ses.pitch = 1.1;
+  speechSynthesis.speak(ses);
+    }
 <body>
 <div class="app">
 <header>
@@ -88,6 +98,7 @@ Ula Ambar gardaş, hoş geldin! Nörüyon, nasılsın? Ben burdayım, ne derdin 
 </div>
 
 <script>
+  <button onclick="ambarSelam()">Ambar'ı konuştur</button>
 const chat=document.getElementById("chat");
 const input=document.getElementById("message");
 
